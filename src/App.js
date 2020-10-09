@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Heading from './components/Heading';
+import Name from './components/Name';
+import Surname from './components/Surname';
+import { MyContextProvider } from './context/MyContext';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyContextProvider>
+      <Heading/>
+      <Name/>
+      <br/>
+      <br/>
+      <Surname/>
+      </MyContextProvider>
     </div>
   );
 }
