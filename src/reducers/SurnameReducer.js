@@ -4,9 +4,10 @@ export const SurnameReducer = (state,action) =>{
         case 'CHANGE' :
              return (action.surname)
         case 'APPEND' :
-            return ([...state,action.surname])
+            return state+=action.surname
         case 'RESET' :
             return (state="Patel")
-      
+        default:
+            return state
     }
 }

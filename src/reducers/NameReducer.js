@@ -5,8 +5,10 @@ export const NameReducer = (state,action) =>{
         case 'CHANGE' :
              return (action.name)
         case 'APPEND' :
-            return ([...state,action.name])
+            return state+=action.name
         case 'RESET':
             return (state="Iti")
+        default:
+            return state
     }
 }
